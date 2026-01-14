@@ -1,73 +1,30 @@
-# React + TypeScript + Vite
+# Snapgram App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Snapgram is a social media web application inspired by Instagram. The app has a responsive design and includes user authentication with the ability to create and view posts.
 
-Currently, two official plugins are available:
+The project is built using React and Vite with TypeScript and Tailwind CSS. Appwrite is used as the backend service for authentication and data management. React Router is used for navigation and TanStack Query is used for data fetching and caching.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+To run the project locally, clone the repository, install the dependencies, and start the development server.
 
-## React Compiler
+git clone https://github.com/your-username/snapgram-app.git
+cd snapgram-app
+npm install
+npm run dev
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+This project requires environment variables to work correctly. Create a .env file in the root directory and add the following variables. All environment variables must start with VITE_.
 
-## Expanding the ESLint configuration
+VITE_APPWRITE_URL=https://cloud.appwrite.io/v1
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+VITE_APPWRITE_PROJECT_ID=
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+VITE_APPWRITE_DATABASE_ID=
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+VITE_APPWRITE_STORAGE_ID=
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+VITE_APPWRITE_USER_COLLECTION_ID=
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+VITE_APPWRITE_POST_COLLECTION_ID=
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+The .env file is not included in the repository for security reasons. An .env.example file is provided to show the required variables. You need to create your own Appwrite project and configure these values.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+This project is intended for learning and portfolio purposes.
