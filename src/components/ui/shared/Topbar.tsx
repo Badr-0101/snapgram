@@ -17,7 +17,11 @@ const Topbar = () => {
     <section className="mt-2.5  hidden max-sm:block ">
       <div className=" topbar flex-between py-4 px-5 ">
         <Link to="/">
-          <img src="/public/assets/images/logo.svg" width={130} height={325} />
+          <img
+            src="/snapgram/public/assets/images/logo.svg"
+            width={130}
+            height={325}
+          />
         </Link>
         <div className="flex gap-4">
           <Button
@@ -27,12 +31,15 @@ const Topbar = () => {
             }}
             className="shad-buton_ghost"
           >
-            <img src="/public/assets/icons/logout.svg" alt="logout" />
+            <img src="/snapgram/public/assets/icons/logout.svg" alt="logout" />
           </Button>
 
           <Link to={`/profile/${user.$id}`}>
             <img
-              src={user.imageUrl || '/assets/icons/profile-placeholder.svg'}
+              src={
+                user.imageUrl ||
+                '/snapgram/assets/icons/profile-placeholder.svg'
+              }
               alt="profile"
               className="h-8 w-8 rounded-full"
             />
