@@ -8,6 +8,8 @@ import {
 } from '@/lib/react-query/queriesAndMutations';
 import Loader from '@/components/ui/shared/Loader';
 import { useInView } from 'react-intersection-observer';
+import filter from '../../../public/assets/icons/filter.svg';
+import search from '../../../public/assets/icons/search.svg';
 
 type TSearchResultProps = {
   isSearchFetching: boolean;
@@ -60,12 +62,7 @@ const Explore = () => {
         <div className="explore-inner_container">
           <h2 className="h3-bold md:h2-bold w-ull">Search Posts</h2>
           <div className="flex gap-1 px-4 w-full rounded-lg bg-dark-4">
-            <img
-              src="/snapgram/assets/icons/search.svg"
-              width={24}
-              height={24}
-              alt="search"
-            />
+            <img src={search} width={24} height={24} alt="search" />
             <Input
               type="text"
               placeholder="explore-search"
@@ -81,12 +78,7 @@ const Explore = () => {
           <h3 className="body-bold md:h3-bold">Popular Today</h3>
           <div className="flex-center gap-3 bg-dark-3 rounded-xl px-4 py-2 cursor-pointer">
             <p className="small-medium md:base-medium text-light-2">All</p>
-            <img
-              src="/snapgram/assets/icons/filter.svg"
-              width={20}
-              height={20}
-              alt="ilter"
-            />
+            <img src={filter} width={20} height={20} alt="ilter" />
           </div>
         </div>
         <div className="flex flex-wrap gap-9 w-full max-w-5xl">

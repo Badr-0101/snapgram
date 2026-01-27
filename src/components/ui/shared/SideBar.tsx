@@ -4,6 +4,9 @@ import { Button } from '../Button';
 import { useSignOutAccount } from '@/lib/react-query/queriesAndMutations';
 import { useUserContext } from '@/context/AuthContext';
 import { sidebarLinks } from '@/constants/index';
+import logo from '../../../../public/assets/images/logo.svg';
+import profilePlaceHolder from '../../../../public/assets/icons/profile-placeholder.svg';
+import logout from '../../../../public/assets/icons/logout.svg';
 const SideBar = () => {
   const navigate = useNavigate();
   const { mutate: signOut, isSuccess } = useSignOutAccount();
@@ -17,20 +20,13 @@ const SideBar = () => {
     <nav className="leftsidebar w-[244px] max-sm:hidden   h-screen p-4  ">
       <div className="flex flex-col gap-11 ">
         <Link to="/" className="flex  gap-3 items-center pt-6">
-          <img
-            src="/snapgram/public/assets/images/logo.svg"
-            width={130}
-            height={325}
-          />
+          <img src={logo} width={130} height={325} />
         </Link>
 
         <Link to={`/profile/${user.$id}`}>
           <div className="flex gap-2.5">
             <img
-              src={
-                user.imageUrl ||
-                '/snapgram/assets/icons/profile-placeholder.svg'
-              }
+              src={user.imageUrl || profilePlaceHolder}
               alt="profile"
               className="h-8 w-8 rounded-full"
             />
@@ -71,7 +67,7 @@ const SideBar = () => {
           }}
           className="shad-buton_ghost flex justify-start pl-2.5"
         >
-          <img src="/snapgram/public/assets/icons/logout.svg" alt="logout" />
+          <img src={logout} alt="logout" />
           <p className="small-medium lg:base-medium">Logout</p>
         </Button>
       </div>

@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/Button';
 import type { IUser } from '@/types/index';
+import profilePlaceHolder from '../../../../public/assets/icons/profile-placeholder.svg';
 type UserCardProps = {
   user: IUser;
 };
@@ -18,7 +19,7 @@ const UserCard = ({ user }: UserCardProps) => {
       >
         <div className="flex items-center gap-3 overflow-hidden">
           <img
-            src={user.imageUrl || '/assets/icons/profile-placeholder.svg'}
+            src={user.imageUrl || profilePlaceHolder}
             alt={user.name}
             className="w-14 h-14 rounded-full object-cover border border-dark-4"
           />

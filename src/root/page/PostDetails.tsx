@@ -8,6 +8,10 @@ import Loader from '@/components/ui/shared/Loader';
 import { formatDateString } from '@/lib/utils';
 import { useUserContext } from '@/context/AuthContext';
 import PostState from '@/components/ui/shared/PostState';
+import edit from '../../../public/assets/icons/edit.svg';
+import ProfilePlaceHolder from '../../../public/assets/icons/profile-placeholder.svg';
+import Delete from '../../../public/assets/icons/delete.svg';
+
 const PostDetails = () => {
   const navigate = useNavigate();
   const { id } = useParams();
@@ -48,10 +52,7 @@ const PostDetails = () => {
                   className="flex items-center gap-3"
                 >
                   <img
-                    src={
-                      post?.creator.imageUrl ||
-                      '/snapgram/assets/icons/profile-placeholder.svg'
-                    }
+                    src={post?.creator.imageUrl || ProfilePlaceHolder}
                     alt="creator"
                     className="w-8 h-8 lg:w-12 lg:h-12 rounded-full"
                   />
@@ -75,12 +76,7 @@ const PostDetails = () => {
                     to={`/update-post/${post?.$id}`}
                     className={`${user.$id !== post?.creator.$id && 'hidden'}`}
                   >
-                    <img
-                      src={'/snapgram/assets/icons/edit.svg'}
-                      alt="edit"
-                      width={24}
-                      height={24}
-                    />
+                    <img src={edit} alt="edit" width={24} height={24} />
                   </Link>
                   <Button
                     onClick={handleDeletePost}
@@ -89,12 +85,7 @@ const PostDetails = () => {
                       user.$id !== post?.creator.$id && 'hidden'
                     }`}
                   >
-                    <img
-                      src={'/snapgram/assets/icons/delete.svg'}
-                      alt="delete"
-                      width={24}
-                      height={24}
-                    />
+                    <img src={Delete} alt="delete" width={24} height={24} />
                   </Button>
                 </div>
               </div>
