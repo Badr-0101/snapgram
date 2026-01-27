@@ -11,7 +11,7 @@ type tpostCardProps = {
 
 const PostCard = ({ post }: tpostCardProps) => {
   const { user } = useUserContext();
-  console.log(post);
+
   return (
     <div className="post-card w-fit">
       <div className="flex-betwen">

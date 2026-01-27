@@ -11,7 +11,7 @@ const SideBar = () => {
   const navigate = useNavigate();
   const { mutate: signOut, isSuccess } = useSignOutAccount();
   const { user } = useUserContext();
-  console.log(user);
+
   useEffect(() => {
     if (isSuccess) navigate(0);
   }, [isSuccess]);

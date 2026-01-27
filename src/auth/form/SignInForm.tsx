@@ -61,8 +61,6 @@ function SignInForm() {
       toast('login faild pleas try again.');
       return;
     }
-
-    console.log(values);
   }
   return (
     <div className="flex flex-center flex-col sm:w-420 ">

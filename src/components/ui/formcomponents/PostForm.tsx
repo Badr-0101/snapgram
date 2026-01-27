@@ -74,7 +74,7 @@ const PostForm = ({ post, action }: TpostPorps) => {
     }
     navigate(`/post/${post.$id}`);
   }
-  console.log(post);
+
   return (
     <Form {...form}>
       <form
