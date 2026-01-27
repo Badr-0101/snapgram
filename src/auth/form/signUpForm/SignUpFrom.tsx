@@ -19,6 +19,9 @@ import {
   useUserContext,
 } from './index';
 import { Link } from 'react-router-dom';
+
+import logo from '../../../../public/assets/images/logo.svg';
+
 function SignUpFrom() {
   const navigate = useNavigate();
   const { mutateAsync: createUserAccount, isPending: isCreateingAccount } =
@@ -68,7 +71,7 @@ function SignUpFrom() {
     <div>
       <Form {...form}>
         <div className="flex flex-center flex-col sm:w-420 ">
-          <img src="/snapgram/public/assets/images/logo.svg" alt="logo" />
+          <img src={logo} alt="logo" />
           <h2 className={'h3-bold md:h2-bold pt-5 sm:pt-12'}>
             create anew account
           </h2>

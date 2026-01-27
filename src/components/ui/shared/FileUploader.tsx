@@ -2,7 +2,7 @@
 import { useState, useCallback } from 'react';
 import { type FileWithPath, useDropzone } from 'react-dropzone';
 import { Button } from '../Button';
-
+import fileUpload from '../../../../public/assets/icons/file-upload.svg';
 type TfileUploaderProps = {
   fieldChange: (FILES: File[]) => void;
   mediaUrl: string;
@@ -17,7 +17,7 @@ const FileUploader = ({ fieldChange, mediaUrl }: TfileUploaderProps) => {
       fieldChange(acceptedFiles);
       setFileUrl(URL.createObjectURL(acceptedFiles[0]));
     },
-    [fieldChange]
+    [fieldChange],
   );
 
   const { getRootProps, getInputProps } = useDropzone({
@@ -41,12 +41,7 @@ const FileUploader = ({ fieldChange, mediaUrl }: TfileUploaderProps) => {
         </>
       ) : (
         <div className="file_uploader-box flex flex-center flex-col items-center">
-          <img
-            src="/assets/icons/file-upload.svg"
-            width={96}
-            height={77}
-            alt="file-upload"
-          />
+          <img src={fileUpload} width={96} height={77} alt="file-upload" />
           <h3 className="base-medium text-light-2 mb-2 mt-6">
             Drag photo here
           </h3>

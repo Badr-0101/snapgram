@@ -22,7 +22,7 @@ import { toast } from 'sonner';
 
 import { useUserContext } from '@/context/AuthContext';
 import { useSignInAccount } from '@/lib/react-query/queriesAndMutations';
-
+import logo from '../../../public/assets/images/logo.svg';
 function SignInForm() {
   const navigate = useNavigate();
 
@@ -66,7 +66,7 @@ function SignInForm() {
   }
   return (
     <div className="flex flex-center flex-col sm:w-420 ">
-      <img src="/snapgram/public/assets/images/logo.svg" alt="logo" />
+      <img src={logo} alt="logo" />
       <h2 className={'h3-bold md:h2-bold pt-5 sm:pt-12'}>
         create anew account
       </h2>

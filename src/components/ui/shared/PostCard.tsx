@@ -3,6 +3,8 @@ import { formatDateString } from '@/lib/utils';
 import { useUserContext } from '@/context/AuthContext';
 import PostState from './PostState';
 import type { PostDocument } from '@/types';
+import profilePlaceholder from '../../../../public/assets/icons/profile-placeholder.svg';
+import edit from '../../../../public/assets/icons/edit.svg';
 type tpostCardProps = {
   post: PostDocument;
 };
@@ -17,10 +19,7 @@ const PostCard = ({ post }: tpostCardProps) => {
           <div className="flex items-center gap-3 ">
             <Link to={`/profile/${post.creator?.$id}`}>
               <img
-                src={
-                  post.creator?.imageUrl ||
-                  '/assets/icons/profile-placeholder.svg'
-                }
+                src={post.creator?.imageUrl || profilePlaceholder}
                 alt="creator"
                 className="w-12 lg:h-12 rounded-full"
               />
@@ -39,12 +38,7 @@ const PostCard = ({ post }: tpostCardProps) => {
             to={`/update-post/${post.$id}`}
             className={`${user.$id !== post.creator.$id ? 'hidden' : ''}`}
           >
-            <img
-              src="/assets/icons/edit.svg"
-              alt="edit"
-              width={20}
-              height={20}
-            />
+            <img src={edit} alt="edit" width={20} height={20} />
           </Link>
         </div>
       </div>
@@ -61,7 +55,7 @@ const PostCard = ({ post }: tpostCardProps) => {
           </ul>
         </div>
         <img
-          src={post?.imageUrl || '/public/assets/icons/profile-placeholder.svg'}
+          src={post?.imageUrl || profilePlaceholder}
           className="post-card_img"
           alt="post image"
           width={468}

@@ -8,7 +8,7 @@ type GridPostListProps = {
   showUser?: boolean;
   showStats?: boolean;
 };
-
+import placeHolder from '../../../../public/assets/icons/profile-placeholder.svg';
 const GridPostList = ({
   posts,
   showUser = true,
@@ -31,10 +31,7 @@ const GridPostList = ({
             {showUser && (
               <div className="flex items-center justify-start gap-2 flex-1">
                 <img
-                  src={
-                    post.creator.imageUrl ||
-                    '/assets/icons/profile-placeholder.svg'
-                  }
+                  src={post.creator.imageUrl || placeHolder}
                   alt="creator"
                   className="w-8 h-8 rounded-full"
                 />

@@ -7,7 +7,10 @@ import {
 } from '@/lib/react-query/queriesAndMutations';
 import { checkIsLiked } from '@/lib/utils';
 import type { PostDocument } from '@/types/index';
-
+import liked from '../../../../public/assets/icons/liked.svg';
+import like from '../../../../public/assets/icons/like.svg';
+import save from '../../../../public/assets/icons/save.svg';
+import saved from '../../../../public/assets/icons/saved.svg';
 type TpostProps = {
   post: PostDocument;
   userId: string;
@@ -23,7 +26,7 @@ const PostState = ({ post, userId }: TpostProps) => {
 
   const savedPosts = savedPostsData?.documents || [];
   const savedPostRecord = savedPosts.find(
-    (record) => record.post.$id === post.$id
+    (record) => record.post.$id === post.$id,
   );
   const isSaved = !!savedPostRecord;
 
@@ -67,11 +70,7 @@ const PostState = ({ post, userId }: TpostProps) => {
     <div className="flex justify-between items-center z-20">
       <div className="flex gap-2 mr-5 mt-5">
         <img
-          src={
-            checkIsLiked(likes, userId)
-              ? '/public/assets/icons/liked.svg'
-              : '/public/assets/icons/like.svg'
-          }
+          src={checkIsLiked(likes, userId) ? liked : like}
           alt="like icon"
           width={20}
           height={20}
@@ -83,11 +82,7 @@ const PostState = ({ post, userId }: TpostProps) => {
 
       <div className="flex gap-2 mr-5 mt-5">
         <img
-          src={
-            isSaved
-              ? '/public/assets/icons/saved.svg'
-              : '/public/assets/icons/save.svg'
-          }
+          src={isSaved ? saved : save}
           alt="save"
           width={20}
           height={20}
