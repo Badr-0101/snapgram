@@ -71,7 +71,7 @@ function SignUpFrom() {
     
       <Form {...form}>
         <div className="flex flex-center flex-col sm:w-420 ">
-          <img src="/public/assets/images/logo.svg" alt="logo" />
+          <img src="/snapgram/logo.svg" alt="logo" />
           <h2 className={"h3-bold md:h2-bold pt-5 sm:pt-12"}>create anew account</h2>
           <p className={"text-light-3"}>to use Sanpgram please enter your details</p>
         <form  onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 w-full flex flex-col gap-2.5">
