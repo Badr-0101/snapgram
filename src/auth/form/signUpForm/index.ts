@@ -10,7 +10,7 @@ export  {
   FormLabel,
   FormMessage,
 } from "@/components/ui/formcomponents/form"
-export  { Button } from "@/components/ui/button"
+export  { Button } from "@/components/ui/Button"
 export  { Input } from "@/components/ui/formcomponents/input"
 export  { signUpSchema } from "@/lib/validation/index"
 export  {default as Loader} from "@/components/ui/shared/Loader"

@@ -2,7 +2,7 @@
 import { Link, useParams, useNavigate } from "react-router-dom";
 import { useGetPostById } from "@/lib/react-query/queriesAndMutations";
 import Loader from "./Loader";
-import { Button } from "../button";
+import { Button } from "../Button";
 
 const PostPopUp = () => {
     const navigate = useNavigate()

@@ -1,7 +1,7 @@
 import  {useState,useCallback} from 'react'
 import { type FileWithPath, useDropzone } from 'react-dropzone'
 import fileUploadImg from '@/assets/icons/file-upload.svg'
-import { Button } from '../button'
+import { Button } from '../Button'
 
 type TfileUploaderProps={
   fieldChange: (FILES: File[]) => void;
