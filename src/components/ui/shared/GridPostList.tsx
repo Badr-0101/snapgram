@@ -3,6 +3,7 @@
 import { Link } from "react-router-dom";
 import { useUserContext } from "@/context/AuthContext";
 import PostState from "./PostState";
+import imgPlaceholder from "@/assets/icons/profile-placeholder.svg";
 import type { IPost } from "@/types";
 
 type GridPostListProps = {
@@ -43,7 +44,7 @@ const GridPostList = ({
               {showUser && (
                 <div className="flex items-center gap-2">
                   <img
-                    src={post.creator.imageUrl || "/assets/icons/profile-placeholder.svg"}
+                    src={post.creator.imageUrl || imgPlaceholder}
                     alt={post.creator.name}
                     className="w-7 h-7 rounded-full ring-2 ring-white/30"
                   />

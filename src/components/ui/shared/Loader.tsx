@@ -1,7 +1,8 @@
+import loader from '@/assets/icons/loader.svg'
 function Loader() {
     return (
         <div>
-            <img src="/public/assets/icons/loader.svg" className="w-6 h-6" alt="loader"/>
+            <img src={loader} className="w-6 h-6" alt="loader"/>
         </div>
     )
 }

@@ -2,7 +2,9 @@ import { useEffect } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { Button } from '@/components/ui/button'
 import { useSignOutAccount } from "@/lib/react-query/queriesAndMutations"
-import {useUserContext} from "@/context/AuthContext"
+import { useUserContext } from "@/context/AuthContext"
+import logo from '@/assets/images/logo.svg'
+import logout from '@/assets/icons/logout.svg'
 const Topbar = () => {
   const navigate = useNavigate();
   
@@ -20,7 +22,7 @@ const Topbar = () => {
       <div className=' topbar flex-between py-4 px-5 '>
 
         <Link to="/">
-            <img src="/public/assets/images/logo.svg" width={130} height={325} />
+            <img src={logo} width={130} height={325} />
           </Link>
             <div className="flex gap-4">
               
@@ -29,7 +31,7 @@ const Topbar = () => {
               onClick={() => { signOut() }}
               className='shad-buton_ghost'
               >
-              <img src="/public/assets/icons/logout.svg" alt="logout" />
+              <img src={logout} alt="logout" />
             </Button>
               
             <Link to={`/profile/${user.id}`}>

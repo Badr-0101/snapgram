@@ -5,7 +5,7 @@ import { bottomBarLinks } from '@/constants/index'
 
 const BottomBar = () => {
   return (
-    <nav className=' hidden max-sm:block fixed bottom-0 w-full'>
+    <nav className='bg-black hidden max-sm:block fixed bottom-0 w-full'>
 
                 <ul className='flex flex-row justify-between px-5  '>
                   {bottomBarLinks.map((link,index) => {

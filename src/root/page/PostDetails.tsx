@@ -1,5 +1,5 @@
 import { Link, useNavigate, useParams } from 'react-router-dom';
-import { Button } from '@/components/ui/Button';
+import { Button } from '@/components/ui/button';
 import {
   useGetPostById,
   useDeletPost,

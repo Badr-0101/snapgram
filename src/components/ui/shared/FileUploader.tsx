@@ -1,5 +1,6 @@
 import  {useState,useCallback} from 'react'
-import { type FileWithPath ,useDropzone} from 'react-dropzone'
+import { type FileWithPath, useDropzone } from 'react-dropzone'
+import fileUploadImg from '@/assets/icons/file-upload.svg'
 import { Button } from '../button'
 
 type TfileUploaderProps={
@@ -47,7 +48,7 @@ const FileUploader = ({ fieldChange, mediaUrl }:TfileUploaderProps) => {
           :
           <div className='file_uploader-box flex flex-center flex-col items-center'>
             <img
-              src='/assets/icons/file-upload.svg'
+              src={fileUploadImg}
               width={96}
               height={77}
               alt='file-upload'

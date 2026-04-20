@@ -2,7 +2,7 @@
 
 import { useForm } from 'react-hook-form';
 import { Link, useNavigate } from 'react-router-dom';
-
+import logo from '@/assets/images/logo.svg'
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { Button } from '@/components/ui/button';
@@ -68,7 +68,7 @@ function SignInForm() {
   }
   return (
     <div className="flex flex-center flex-col sm:w-420 ">
-      <img src="/public/assets/images/logo.svg" alt="logo" />
+      <img src={logo} alt="logo" />
       <h2 className={'h3-bold md:h2-bold pt-5 sm:pt-12'}>
         Log in to your account
       </h2>

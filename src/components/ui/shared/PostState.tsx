@@ -2,7 +2,10 @@ import React, { useMemo, useState } from "react";
 import { useLikePost, useSavePost, useDeleteSavedPost, useGetSavedPosts } from "@/lib/react-query/queriesAndMutations";
 import { checkIsLiked } from "@/lib/utils";
 import { type IPost } from "@/types";
-
+import like from "@/assets/icons/like.svg"
+import liked from "@/assets/icons/liked.svg"
+import save from "@/assets/icons/save.svg"
+import saved from "@/assets/icons/saved.svg"
 type TpostProps = {
   post: IPost;
   userId: string;
@@ -61,8 +64,8 @@ const PostState = ({ post, userId }: TpostProps) => {
         <img
           src={
             checkIsLiked(likes, userId)
-              ? "/public/assets/icons/liked.svg"
-              : "/public/assets/icons/like.svg"
+              ? liked
+              : like
           }
           alt="like icon"
           width={20}
@@ -77,8 +80,8 @@ const PostState = ({ post, userId }: TpostProps) => {
         <img
           src={
             isSaved
-              ? "/public/assets/icons/saved.svg"
-              : "/public/assets/icons/save.svg"
+              ? saved
+              : save
           }
           alt="save"
           width={20}

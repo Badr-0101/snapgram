@@ -1,0 +1,55 @@
+
+> snapgram-app@0.0.0 build
+> tsc -b && vite build
+
+src/auth/form/SignInForm.tsx(8,24): error TS1261: Already included file name 'D:/RCT/snapgram/snapgram-app/src/components/ui/button.tsx' differs from file name 'D:/RCT/snapgram/snapgram-app/src/components/ui/Button.tsx' only in casing.
+  The file is in the program because:
+    Imported via '@/components/ui/button' from file 'D:/RCT/snapgram/snapgram-app/src/auth/form/SignInForm.tsx'
+    Imported via "@/components/ui/button" from file 'D:/RCT/snapgram/snapgram-app/src/auth/form/signUpForm/index.ts'
+    Imported via "@/components/ui/button" from file 'D:/RCT/snapgram/snapgram-app/src/components/ui/shared/UseCard.tsx'
+    Imported via "../button" from file 'D:/RCT/snapgram/snapgram-app/src/components/ui/formcomponents/PostForm.tsx'
+    Imported via '../button' from file 'D:/RCT/snapgram/snapgram-app/src/components/ui/shared/FileUploader.tsx'
+    Imported via "../button" from file 'D:/RCT/snapgram/snapgram-app/src/components/ui/shared/SideBar.tsx'
+    Imported via '@/components/ui/button' from file 'D:/RCT/snapgram/snapgram-app/src/components/ui/shared/Topbar.tsx'
+    Imported via "../button" from file 'D:/RCT/snapgram/snapgram-app/src/components/ui/shared/PostPopUp.tsx'
+    Matched by include pattern 'src' in 'D:/RCT/snapgram/snapgram-app/tsconfig.app.json'
+    Imported via '@/components/ui/Button' from file 'D:/RCT/snapgram/snapgram-app/src/root/page/PostDetails.tsx'
+src/components/ui/formcomponents/PostForm.tsx(44,31): error TS2339: Property 'caption' does not exist on type 'Document'.
+src/components/ui/formcomponents/PostForm.tsx(46,32): error TS2339: Property 'location' does not exist on type 'Document'.
+src/components/ui/formcomponents/PostForm.tsx(47,27): error TS2339: Property 'tags' does not exist on type 'Document'.
+src/components/ui/formcomponents/PostForm.tsx(56,31): error TS2339: Property 'imageId' does not exist on type 'Document'.
+src/components/ui/formcomponents/PostForm.tsx(57,31): error TS2339: Property 'imageUrl' does not exist on type 'Document'.
+src/components/ui/formcomponents/PostForm.tsx(67,21): error TS2339: Property 'id' does not exist on type 'IUser'.
+src/components/ui/formcomponents/PostForm.tsx(103,61): error TS2339: Property 'imageUrl' does not exist on type 'Document'.
+src/components/ui/shared/GridPostList.tsx(57,55): error TS2339: Property 'id' does not exist on type 'IUser'.
+src/components/ui/shared/PostCard.tsx(50,15): error TS2339: Property 'id' does not exist on type 'IUser'.
+src/components/ui/shared/PostCard.tsx(90,45): error TS2339: Property 'id' does not exist on type 'IUser'.
+src/components/ui/shared/SideBar.tsx(24,36): error TS2339: Property 'id' does not exist on type 'IUser'.
+src/components/ui/shared/Topbar.tsx(35,40): error TS2339: Property 'id' does not exist on type 'IUser'.
+src/context/AuthContext.tsx(23,49): error TS2345: Argument of type '{ user: { id: string; name: string; username: string; email: string; imageUrl: string; bio: string; }; isLoading: boolean; isAuthenticated: boolean; setUser: () => void; setIsAuthenticated: () => void; checkAuthUser: () => Promise<...>; }' is not assignable to parameter of type 'IContextType'.
+  Types of property 'user' are incompatible.
+    Property '$id' is missing in type '{ id: string; name: string; username: string; email: string; imageUrl: string; bio: string; }' but required in type 'IUser'.
+src/context/AuthContext.tsx(27,45): error TS2345: Argument of type '{ id: string; name: string; username: string; email: string; imageUrl: string; bio: string; }' is not assignable to parameter of type 'IUser | (() => IUser)'.
+  Property '$id' is missing in type '{ id: string; name: string; username: string; email: string; imageUrl: string; bio: string; }' but required in type 'IUser'.
+src/context/AuthContext.tsx(38,21): error TS2353: Object literal may only specify known properties, and 'id' does not exist in type 'SetStateAction<IUser>'.
+src/lib/appWrite/api.ts(25,13): error TS2322: Type 'string' is not assignable to type 'URL'.
+src/lib/appWrite/api.ts(458,7): error TS2345: Argument of type '"center"' is not assignable to parameter of type 'ImageGravity'.
+src/root/page/AllUsers.tsx(26,27): error TS2739: Type 'DefaultDocument' is missing the following properties from type 'IUser': name, username, email, imageUrl, bio
+src/root/page/Home.tsx(16,12): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+src/root/page/Home.tsx(16,28): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+src/root/page/Home.tsx(23,35): error TS2740: Type 'Document' is missing the following properties from type 'IPost': creator, imageUrl, imageAlt, caption, and 3 more.
+src/root/page/PostDetails.tsx(2,24): error TS1149: File name 'D:/RCT/snapgram/snapgram-app/src/components/ui/Button.tsx' differs from already included file name 'D:/RCT/snapgram/snapgram-app/src/components/ui/button.tsx' only in casing.
+  The file is in the program because:
+    Imported via '@/components/ui/button' from file 'D:/RCT/snapgram/snapgram-app/src/auth/form/SignInForm.tsx'
+    Imported via "@/components/ui/button" from file 'D:/RCT/snapgram/snapgram-app/src/auth/form/signUpForm/index.ts'
+    Imported via "@/components/ui/button" from file 'D:/RCT/snapgram/snapgram-app/src/components/ui/shared/UseCard.tsx'
+    Imported via "../button" from file 'D:/RCT/snapgram/snapgram-app/src/components/ui/formcomponents/PostForm.tsx'
+    Imported via '../button' from file 'D:/RCT/snapgram/snapgram-app/src/components/ui/shared/FileUploader.tsx'
+    Imported via "../button" from file 'D:/RCT/snapgram/snapgram-app/src/components/ui/shared/SideBar.tsx'
+    Imported via '@/components/ui/button' from file 'D:/RCT/snapgram/snapgram-app/src/components/ui/shared/Topbar.tsx'
+    Imported via "../button" from file 'D:/RCT/snapgram/snapgram-app/src/components/ui/shared/PostPopUp.tsx'
+    Matched by include pattern 'src' in 'D:/RCT/snapgram/snapgram-app/tsconfig.app.json'
+    Imported via '@/components/ui/Button' from file 'D:/RCT/snapgram/snapgram-app/src/root/page/PostDetails.tsx'
+src/root/page/Saved.tsx(8,77): error TS2339: Property 'id' does not exist on type 'IUser'.
+src/root/page/UserProfile.tsx(79,35): error TS2322: Type 'DefaultDocument[]' is not assignable to type 'IPost[]'.
+  Type 'DefaultDocument' is missing the following properties from type 'IPost': creator, imageUrl, imageAlt, caption, and 3 more.

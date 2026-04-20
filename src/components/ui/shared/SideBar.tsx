@@ -3,7 +3,11 @@ import { Link, NavLink, useNavigate } from 'react-router-dom'
 import { Button } from "../button"
 import { useSignOutAccount } from "@/lib/react-query/queriesAndMutations"
 import { useUserContext } from "@/context/AuthContext"
-import{sidebarLinks} from "@/constants/index"
+import { sidebarLinks } from "@/constants/index"
+import logo from '@/assets/images/logo.svg'
+import logout from '@/assets/icons/logout.svg'
+import profile from '@/assets/icons/profile-placeholder.svg'
+
 const SideBar = () => {
   const navigate = useNavigate()
   const { mutate: signOut,isSuccess } = useSignOutAccount()
@@ -18,13 +22,13 @@ const SideBar = () => {
       <div className='flex flex-col gap-11 '>
 
         <Link to="/" className="flex  gap-3 items-center pt-6">
-            <img src="/public/assets/images/logo.svg" width={130} height={325} />
+            <img src={logo} width={130} height={325} />
         </Link>
         
         <Link to={`/profile/${user.id}`}>
           <div className='flex gap-2.5'>
 
-              <img src={user.imageUrl||"/assets/icons/profile-placeholder.svg"}
+              <img src={user.imageUrl||profile}
                     alt="profile"
                     className="h-8 w-8 rounded-full"
               />
@@ -62,7 +66,7 @@ const SideBar = () => {
               onClick={() => { signOut() }}
               className='shad-buton_ghost flex justify-start pl-2.5'
               >
-          <img src="/public/assets/icons/logout.svg" alt="logout" />
+          <img src={logout} alt="logout" />
           <p className='small-medium lg:base-medium'>Logout</p>
             </Button>
       </div>

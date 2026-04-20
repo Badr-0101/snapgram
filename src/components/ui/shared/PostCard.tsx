@@ -4,6 +4,7 @@ import { useUserContext } from "@/context/AuthContext";
 import PostState from "./PostState";
 import { type IPost } from "@/types";
 import PostCardSkeleton from "./PostCardSkeleton";
+import edit from '@/assets/icons/edit.svg'
 
 type TPostCardProps = {
   post: IPost;
@@ -53,9 +54,9 @@ const PostCard = ({ post, isLoading = false }: TPostCardProps) => {
             aria-label="Edit post"
             className="p-1.5 rounded-lg hover:bg-dark-4 transition-colors"
           >
-            <img src="/assets/icons/edit.svg" alt="edit" width={20} height={20} />
+            <img src={edit} alt="edit" width={20} height={20} />
           </Link>
-        )}
+        )}  
       </header>
 
       {/* ── Body ───────────────────────────────────────────── */}

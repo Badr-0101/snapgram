@@ -6,6 +6,7 @@ import GridPostList from "@/components/ui/shared/GridPostList";
 import Loader from "@/components/ui/shared/Loader";
 import useDebounce from "@/hooks/useDebounce";
 import { useGetPosts, useSearchPosts } from "@/lib/react-query/queriesAndMutations";
+import search from '@/assets/icons/search.svg'
 
 type SearchResultsProps = {
   isFetching: boolean;
@@ -52,7 +53,7 @@ const Explore = () => {
         {/* Search Header */}
         <h2 className="h3-bold md:h2-bold w-full">Search Posts</h2>
         <div className="flex gap-2 px-4 w-full rounded-lg bg-dark-4 items-center">
-          <img src="/assets/icons/search.svg" width={24} height={24} alt="search" />
+          <img src={search} width={24} height={24} alt="search" />
           <Input
             type="text"
             placeholder="Search posts..."
